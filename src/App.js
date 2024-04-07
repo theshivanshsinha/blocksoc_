@@ -8,7 +8,6 @@ import Blogs from "./components/Blogs/Blogs";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Team from "./components/Team/Team";
 import MainPage from "./components/MainPage/MainPage";
-import Bg from "./components/Bg/Bg";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -35,7 +34,7 @@ function App() {
         <div>
           <Nav showNav={showNav} />
           <Routes>
-            <Route path="/" element={<Bg />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/events" element={<Events />} />
