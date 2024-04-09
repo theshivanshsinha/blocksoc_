@@ -9,13 +9,10 @@ import {
   Center,
   Divider,
 } from "@chakra-ui/react";
-import Nav from "../Nav/Nav";
-import Nav2 from "../Nav2/Nav2";
 
 const Contact = () => {
   return (
     <Box minHeight="100vh" bg="gray.900" color="white">
-      <Nav2 />
       <Center>
         <Box
           w="80%"
@@ -25,14 +22,11 @@ const Contact = () => {
           borderRadius="xl"
           boxShadow="md"
         >
-          <Center>
-            <Image src={"./logo.png"} alt="Blocksoc Logo" boxSize="200px" />
-          </Center>
-          <Divider my={8} borderColor="gray.600" />
           <VStack spacing={8} align="start" w="100%">
             <Heading as="h1" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
-              Contact Us
+              <span style={{ color: "#b300b3" }}>Contact </span>Us
             </Heading>
+            <Divider my={8} borderColor="gray.600" />
             <Text fontSize="lg" maxW="80ch">
               If you have any questions or feedback, we'd love to hear from you!
               Feel free to reach out to us through the following channels:
@@ -41,31 +35,26 @@ const Contact = () => {
               <ContactMethod
                 icon="https://www.freepnglogos.com/uploads/gmail-email-logo-png-16.png"
                 title="Email"
-                link="mailto:blocksoc@example.com"
-                detail="blocksoc@example.com"
+                link="mailto:blocksoc.bphc@gmail.com"
+                detail="blocksoc.bphc@gmail.com"
               />
               <ContactMethod
                 icon="https://vignette.wikia.nocookie.net/youtubepedia/images/5/55/Facebook.png/revision/latest?cb=20170327031942&path-prefix=es"
                 title="Facebook"
-                link="https://www.facebook.com/blocksoc"
-                detail="Blocksoc Facebook Page"
+                link="https://www.facebook.com/groups/blocksoc/?ref=share&mibextid=NSMWBT"
+                detail="https://www.facebook.com/groups/blocksoc/?ref=share&mibextid=NSMWBT"
               />
               <ContactMethod
                 icon="https://pluspng.com/img-png/logo-instagram-png-open-2000.png"
                 title="Instagram"
-                link="https://www.instagram.com/blocksoc/"
-                detail="@blocksoc"
+                link="https://www.instagram.com/blocksoc.bphc?igsh=MXFjaDRma3F2bHk2bw=="
+                detail="https://www.instagram.com/blocksoc.bphc?igsh=MXFjaDRma3F2bHk2bw=="
               />
               <ContactMethod
                 icon="https://static.vecteezy.com/system/resources/previews/017/339/624/original/linkedin-icon-free-png.png"
                 title="LinkedIn"
-                link="https://www.linkedin.com/company/blocksoc"
-                detail="Blocksoc LinkedIn Page"
-              />
-              <ContactMethod
-                icon="http://pluspng.com/img-png/phone-png-clipart-1667.png"
-                title="President's Phone"
-                detail="+91 0000000000"
+                link="https://www.linkedin.com/company/blocksoc-hyderabad/"
+                detail="https://www.linkedin.com/company/blocksoc-hyderabad/"
               />
             </VStack>
           </VStack>
@@ -78,18 +67,50 @@ const Contact = () => {
 const ContactMethod = ({ icon, title, link, detail }) => {
   return (
     <VStack align="start" spacing={2} w="100%">
-      <Box display="flex" alignItems="center">
+      <Box
+        display="flex"
+        alignItems="center"
+        position="relative"
+        _hover={{
+          ".overlay": {
+            opacity: 1,
+          },
+        }}
+      >
         <Image src={icon} alt={title} boxSize="50px" />
         <Text ml={2} fontSize="lg">
-          <strong>{title}:</strong>{" "}
+          <strong style={{ color: "#1aa3ff" }}>{title}:</strong>{" "}
           {link ? (
-            <Link href={link} color="teal.300">
-              {detail}
-            </Link>
+            <Link href={link} color="teal.300"></Link>
           ) : (
             <Text color="gray.400">{detail}</Text>
           )}
         </Text>
+        {link && (
+          <Box
+            position="absolute"
+            top="50%"
+            left="20vw"
+            transform="translate(-50%, -50%)"
+            bg="blackAlpha.800"
+            color="white"
+            p={2}
+            borderRadius="md"
+            className="overlay"
+            opacity={0}
+            transition="opacity 0.3s"
+          >
+            <Link
+              href={link}
+              color="white"
+              textDecoration="underline"
+              position="relative"
+              left="0vw"
+            >
+              {detail}
+            </Link>
+          </Box>
+        )}
       </Box>
     </VStack>
   );

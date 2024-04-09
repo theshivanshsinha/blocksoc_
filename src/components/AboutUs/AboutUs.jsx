@@ -4,7 +4,7 @@ import Nav2 from "../Nav2/Nav2";
 
 const AboutUs = () => {
   return (
-    <Box minHeight="120vh" bg="gray.900" color="white">
+    <Box minHeight="100vh" bg="gray.900" color="white">
       <Center>
         <Box
           p={10}
@@ -12,7 +12,7 @@ const AboutUs = () => {
           bg="gray.800"
           borderRadius="xl"
           boxShadow="md"
-          height={"100vh"}
+          height={"90vh"}
           width={"90vw"}
         >
           <Center>
@@ -29,35 +29,20 @@ const AboutUs = () => {
               fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
               style={{ position: "relative", top: "-10vh" }}
             >
-              About Us
+              <span style={{ color: "#b300b3" }}>About </span>Us
             </Heading>
             <Text
               fontSize={{ base: "md", md: "lg" }} // Decreased font size
               maxW="80ch"
               style={{ position: "relative", top: "-10vh", fontSize: "1.5rem" }}
             >
-              Welcome to Blocksoc! We are a community of passionate individuals
-              who are dedicated to fostering innovation and collaboration in the
-              field of technology.
-            </Text>
-            <Text
-              fontSize={{ base: "md", md: "lg" }} // Decreased font size
-              maxW="80ch"
-              style={{ position: "relative", top: "-10vh", fontSize: "1.5rem" }}
-            >
-              Our mission is to provide a platform for students and
-              professionals alike to come together, learn from each other, and
-              create meaningful projects that make a positive impact on society.
-            </Text>
-            <Text
-              fontSize={{ base: "md", md: "lg" }} // Decreased font size
-              maxW="80ch"
-              style={{ position: "relative", top: "-10vh", fontSize: "1.5rem" }}
-            >
-              Whether you're a beginner looking to explore the world of
-              technology or an experienced developer seeking new challenges,
-              Blocksoc has something for everyone. Join us in our journey to
-              build a better tomorrow through technology!
+              We are the Blockchain Club of BPHC. Our enthusiasm for Blockchain
+              Technology is matched only by our deep and unwavering dedication
+              to exploring, learning about, and promoting blockchain among
+              students. Through active involvement in discussions, projects, and
+              initiatives within our club and the broader blockchain development
+              community, we strive to foster understanding and innovation in
+              this transformative field.
             </Text>
           </VStack>
           <Image
@@ -66,9 +51,9 @@ const AboutUs = () => {
             width={"700px"}
             style={{
               position: "relative",
-              left: "62vw",
+              left: "65vw",
               transform: "translateX(-50%)",
-              top: "-55vh",
+              top: "-43vh",
             }} // Adjusted image position
           />
         </Box>

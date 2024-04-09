@@ -29,6 +29,13 @@ const LandingPage = () => {
     };
   }, [vantaEffect]);
 
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight * 1,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div ref={ref} className="main">
       <div>
@@ -55,7 +62,9 @@ const LandingPage = () => {
           className="text"
         />
       </div>
-      <button className="cta-button">Explore!</button>
+      <button className="cta-button" onClick={handleScrollDown}>
+        Explore!
+      </button>
     </div>
   );
 };
