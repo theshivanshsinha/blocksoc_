@@ -12,183 +12,24 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Team = () => {
-  const members = [
-    {
-      name: "John Doe",
-      branch: "Computer Science",
-      email: "john@example.com",
-      github: "johndoe",
-      year: "Senior",
-      hobbies: "Reading, coding",
-      skills: "JavaScript, React, Node.js",
-      position: "Developer",
-      image: "john.jpg",
-    },
-    {
-      name: "John Moe",
-      branch: "Computer Science",
-      email: "john@example.com",
-      github: "johndoe",
-      year: "Senior",
-      hobbies: "Reading, coding",
-      skills: "JavaScript, React, Node.js",
-      position: "Developer",
-      image: "john.jpg",
-    },
-    {
-      name: "John Koe",
-      branch: "Computer Science",
-      email: "john@example.com",
-      github: "johndoe",
-      year: "Senior",
-      hobbies: "Reading, coding",
-      skills: "JavaScript, React, Node.js",
-      position: "Developer",
-      image: "john.jpg",
-    },
-    {
-      name: "John Roe",
-      branch: "Computer Science",
-      email: "john@example.com",
-      github: "johndoe",
-      year: "Senior",
-      hobbies: "Reading, coding",
-      skills: "JavaScript, React, Node.js",
-      position: "Developer",
-      image: "john.jpg",
-    },
-    {
-      name: "Jane Smith",
-      branch: "Electrical Engineering",
-      email: "jane@example.com",
-      github: "janesmith",
-      year: "Junior",
-      hobbies: "Painting, swimming",
-      skills: "Python, Django, SQL",
-      position: "Developer",
-      image: "jane.jpg",
-    },
-    {
-      name: "Mike Johnson",
-      branch: "Business Administration",
-      email: "mike@example.com",
-      github: "mikejohnson",
-      year: "Senior",
-      hobbies: "Playing guitar, hiking",
-      skills: "Marketing, Sales, Management",
-      position: "Logistics",
-      image: "mike.jpg",
-    },
-    {
-      name: "Emily Johnson",
-      branch: "Mathematics",
-      email: "emily@example.com",
-      github: "emilyjohnson",
-      year: "Junior",
-      hobbies: "Drawing, traveling",
-      skills: "Data Analysis, Statistics",
-      position: "Research and Content",
-      image: "emily.jpg",
-    },
-    {
-      name: "Michael Smith",
-      branch: "Physics",
-      email: "michael@example.com",
-      github: "michaelsmith",
-      year: "Senior",
-      hobbies: "Playing piano, photography",
-      skills: "Quantum Mechanics, Astrophysics",
-      position: "Research and Content",
-      image: "michael.jpg",
-    },
-    {
-      name: "Sara Lee",
-      branch: "Chemistry",
-      email: "sara@example.com",
-      github: "saralee",
-      year: "Junior",
-      hobbies: "Cooking, hiking",
-      skills: "Organic Chemistry, Biochemistry",
-      position: "Logistics",
-      image: "sara.jpg",
-    },
-    {
-      name: "David Wilson",
-      branch: "Environmental Science",
-      email: "david@example.com",
-      github: "davidwilson",
-      year: "Senior",
-      hobbies: "Gardening, bird watching",
-      skills: "Sustainability, Climate Change",
-      position: "Logistics",
-      image: "david.jpg",
-    },
-    {
-      name: "David Wilwa",
-      branch: "Environmental Science",
-      email: "david@example.com",
-      github: "davidwilson",
-      year: "Senior",
-      hobbies: "Gardening, bird watching",
-      skills: "Sustainability, Climate Change",
-      position: "Logistics",
-      image: "david.jpg",
-    },
-    {
-      name: "David Wilsun",
-      branch: "Environmental Science",
-      email: "david@example.com",
-      github: "davidwilson",
-      year: "Senior",
-      hobbies: "Gardening, bird watching",
-      skills: "Sustainability, Climate Change",
-      position: "Logistics",
-      image: "david.jpg",
-    },
-    {
-      name: "David Baeckon",
-      branch: "Environmental Science",
-      email: "david@example.com",
-      github: "davidwilson",
-      year: "Senior",
-      hobbies: "Gardening, bird watching",
-      skills: "Sustainability, Climate Change",
-      position: "Logistics",
-      image: "david.jpg",
-    },
-    {
-      name: "David Pagl",
-      branch: "Environmental Science",
-      email: "david@example.com",
-      github: "davidwilson",
-      year: "Senior",
-      hobbies: "Gardening, bird watching",
-      skills: "Sustainability, Climate Change",
-      position: "Logistics",
-      image: "david.jpg",
-    },
-    {
-      name: "Jessica Brown",
-      branch: "Sociology",
-      email: "jessica@example.com",
-      github: "jessicabrown",
-      year: "Junior",
-      hobbies: "Writing, yoga",
-      skills: "Social Research, Data Collection",
-      position: "Research and Content",
-      image: "jessica.jpg",
-    },
-    // Your member data
-  ];
+// Import members data
+import members from "./member";
 
+const Team = () => {
   return (
     <Box
       bg="gray.900"
       color="white"
       style={{ position: "relative", top: "0vh" }}
     >
-      <Heading as="h2" size="xl" textAlign="center" mb={10}>
+      <Heading
+        as="h2"
+        size="xl"
+        textAlign="center"
+        position="relative"
+        top="4.9vh"
+        left="-45vw"
+      >
         Our <span style={{ color: "#b300b3" }}>Team</span>
       </Heading>
       <VStack spacing={8}>
@@ -258,7 +99,7 @@ const TeamSection = ({ title, position, members }) => {
         {filteredMembers.length > 0 && (
           <Slider {...settings}>
             {filteredMembers.map((member) => (
-              <TeamCard key={member.name} member={member} />
+              <TeamCard key={member.id} member={member} />
             ))}
           </Slider>
         )}
@@ -270,17 +111,7 @@ const TeamSection = ({ title, position, members }) => {
 };
 
 const TeamCard = ({ member }) => {
-  const {
-    name,
-    branch,
-    email,
-    github,
-    year,
-    hobbies,
-    skills,
-    position,
-    image,
-  } = member;
+  const { name, id, team, photo, linkedIn } = member;
 
   return (
     <Box
@@ -294,27 +125,20 @@ const TeamCard = ({ member }) => {
       boxShadow="md"
       _hover={{ boxShadow: "xl" }}
     >
-      <Image src={image} alt={name} borderRadius="full" boxSize="150px" />
+      <Image src={photo} alt={name} borderRadius="full" boxSize="150px" />
       <Text mt={4} fontSize="xl" fontWeight="semibold" textAlign="center">
         {name}
       </Text>
       <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        {branch}
+        ID: {id}
       </Text>
       <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        {year} - {position}
+        Team: {team}
       </Text>
       <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        {email}
-      </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        {github}
-      </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        <strong>Hobbies:</strong> {hobbies}
-      </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        <strong>Skills:</strong> {skills}
+        <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+          LinkedIn Profile
+        </a>
       </Text>
     </Box>
   );

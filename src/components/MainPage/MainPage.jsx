@@ -8,7 +8,6 @@ const MainPage = () => {
     <div>
       <LandingPage />
       <AboutUs />
-      <Team />
     </div>
   );
 };

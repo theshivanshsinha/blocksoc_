@@ -33,15 +33,6 @@ function Nav2() {
             Home
           </Button>
         </Link>
-        <Link to="/blogs">
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ bg: "transparent", color: "#4FD1C5" }}
-          >
-            Blogs
-          </Button>
-        </Link>
         <Link to="/projects">
           <Button
             variant="ghost"
@@ -60,7 +51,7 @@ function Nav2() {
             Our Events
           </Button>
         </Link>
-        <Link to="/events">
+        <Link to="/team">
           <Button
             variant="ghost"
             color="white"

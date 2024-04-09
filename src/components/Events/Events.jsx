@@ -20,40 +20,66 @@ import {
   Image,
 } from "@chakra-ui/react";
 import Nav from "../Nav/Nav";
+import Nav2 from "../Nav2/Nav2";
+
+import unfold23_1 from "./unfold23_1.jpg";
+import unfold23_2 from "./unfold23_2.jpg";
+import unfold23_3 from "./unfold23_3.jpg";
+import unfold23_4 from "./unfold24_4.jpg";
+
+import solidity22_1 from "./solidity22_1.jpg";
+import solidity22_2 from "./solidity22_2.jpg";
+
+import crypto1 from "./crypto22_1.jpg";
+import crypto2 from "./crypto22_2.jpg";
+import crypto3 from "./crypto22_3.jpg";
+
+import blocksol_1 from "./blocksol23_1.jpg";
+
+import nftopia_1 from "./nftopia_1.jpg";
 
 const Events = () => {
   const events = [
     {
-      title: "Event 1",
-      date: "2022-03-18T00:00:00Z",
+      title: "Unfold 23'",
+      date: "2023-10-19T00:00:00Z",
+      status: "Past Event",
+      description:
+        "Blocksoc was thrilled to be a part of the groundbreaking Unfold 23' hackathon in Bengaluru. As avid supporters of technological innovation, we joined forces with other industry leaders to witness the brightest minds in action. Together, we engaged in a three-day journey of coding, problem-solving, and networking, fostering a collaborative environment that sparks creativity and drives progress. Unfold 23' was more than just a hackathon; it was a testament to the power of community and the limitless possibilities of blockchain technology. We at Blocksoc are proud to have been a part of this transformative event, and we look forward to continuing our journey towards a decentralized future.",
+      location: "KTPO,Bengaluu,India",
+      photos: [unfold23_1, unfold23_2, unfold23_3, unfold23_4],
+    },
+    {
+      title: "Solidity Bootcamp",
+      date: "2022-11-17T00:00:00Z",
       status: "Past Event",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      location: "BITS Hyderabad",
-      photos: ["photo1.jpg", "photo2.jpg"],
+      location: "Atmos22' - BITS Hyderabad",
+      photos: [solidity22_1, solidity22_2],
     },
     {
-      title: "Event 2",
-      date: "2022-06-15T00:00:00Z",
+      title: "Fundamentals of Cryptocurrency",
+      date: "2022-11-25T00:00:00Z",
       status: "Past Event",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      location: "BITS Hyderabad",
-      photos: ["photo3.jpg", "photo4.jpg"],
+      location: "Atmos22' - BITS Hyderabad",
+      photos: [crypto3, crypto2, crypto1],
     },
     {
-      title: "Unfold 24'",
-      date: "2024-05-18T00:00:00Z",
-      status: "Upcoming Event",
+      title: "Blockchain & Solidity - workshop and contest",
+      date: "2023-11-4T00:00:00Z",
+      status: "Past Event",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      location: "BITS Hyderabad",
-      photos: ["photo1.jpg", "photo2.jpg"],
+      location: "Atmos23'-BITS Hyderabad",
+      photos: [blocksol_1],
     },
     {
-      title: "Unfold 25'",
-      date: "2025-05-18T00:00:00Z",
+      title: "NFTopia",
+      date: "2024-04-14T00:00:00Z",
       status: "Upcoming Event",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      location: "BITS Hyderabad",
-      photos: ["photo1.jpg", "photo2.jpg"],
+      location: "TechWeek-BITS Hyderabad",
+      photos: [nftopia_1],
     },
   ];
 
@@ -70,7 +96,7 @@ const Events = () => {
         }}
         alt="Blocksoc Logo"
       />
-      <Nav />
+      <Nav2 />
       <Center>
         <Box
           w="80%"
