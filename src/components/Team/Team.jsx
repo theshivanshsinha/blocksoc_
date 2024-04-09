@@ -11,7 +11,7 @@ import Nav2 from "../Nav2/Nav2";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import lkd from "./lkd.png";
 // Import members data
 import members from "./member";
 
@@ -124,20 +124,29 @@ const TeamCard = ({ member }) => {
       color="white"
       boxShadow="md"
       _hover={{ boxShadow: "xl" }}
+      textAlign="center"
     >
-      <Image src={photo} alt={name} borderRadius="full" boxSize="150px" />
-      <Text mt={4} fontSize="xl" fontWeight="semibold" textAlign="center">
+      <Box maxW="200px" mx="auto" my={4} borderRadius="full" overflow="hidden">
+        <Image
+          src={photo}
+          alt={name}
+          objectFit="cover"
+          boxSize="200px"
+          borderRadius="full"
+        />
+      </Box>
+      <Text mt={4} fontSize="xl" fontWeight="semibold">
         {name}
       </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        ID: {id}
+      <Text fontSize="md" color="gray.300" mb={2}>
+        {id}
       </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        Team: {team}
-      </Text>
-      <Text fontSize="md" color="gray.300" textAlign="center" mb={2}>
-        <a href={linkedIn} target="_blank" rel="noopener noreferrer">
-          LinkedIn Profile
+      <Text fontSize="md" color="gray.300" mb={2}>
+        <a href={linkedIn} rel="noopener noreferrer">
+          <Image
+            src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG39.png"
+            boxSize="30px"
+          />
         </a>
       </Text>
     </Box>
