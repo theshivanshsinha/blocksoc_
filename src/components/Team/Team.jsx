@@ -1,18 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  SimpleGrid,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import Nav2 from "../Nav2/Nav2";
+import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import lkd from "./lkd.png";
-// Import members data
+
 import members from "./member";
 
 const Team = () => {
