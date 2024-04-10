@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, useMediaQuery } from "@chakra-ui/react";
 
 function Nav() {
   const [scrollOpacity, setScrollOpacity] = useState(0);
+  const [isLargerThanMD] = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +32,7 @@ function Nav() {
       transition="box-shadow 0.3s"
     >
       <Box
-        display={{ base: "none", md: "flex" }}
+        display="flex"
         maxWidth="1200px"
         position={"relative"}
         left={"50%"}
@@ -50,68 +51,38 @@ function Nav() {
               Home
             </Button>
           </Link>
-          <Link to="/projects">
-            <Button
-              variant="ghost"
-              color="white"
-              _hover={{ bg: "transparent", color: "#4FD1C5" }}
-            >
-              Our Projects
-            </Button>
-          </Link>
-          <Link to="/events">
-            <Button
-              variant="ghost"
-              color="white"
-              _hover={{ bg: "transparent", color: "#4FD1C5" }}
-            >
-              Our Events
-            </Button>
-          </Link>
-          <Link to="/team">
-            <Button
-              variant="ghost"
-              color="white"
-              _hover={{ bg: "transparent", color: "#4FD1C5" }}
-            >
-              Our Team
-            </Button>
-          </Link>
+          {isLargerThanMD && (
+            <>
+              <Link to="/projects">
+                <Button
+                  variant="ghost"
+                  color="white"
+                  _hover={{ bg: "transparent", color: "#4FD1C5" }}
+                >
+                  Our Projects
+                </Button>
+              </Link>
+              <Link to="/events">
+                <Button
+                  variant="ghost"
+                  color="white"
+                  _hover={{ bg: "transparent", color: "#4FD1C5" }}
+                >
+                  Our Events
+                </Button>
+              </Link>
+              <Link to="/team">
+                <Button
+                  variant="ghost"
+                  color="white"
+                  _hover={{ bg: "transparent", color: "#4FD1C5" }}
+                >
+                  Our Team
+                </Button>
+              </Link>
+            </>
+          )}
         </Box>
-      </Box>
-      <Box
-        display={{ base: "block", md: "none" }}
-        textAlign="center"
-        px={4}
-        py={2}
-      >
-        <Link to="/">
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ bg: "transparent", color: "#4FD1C5" }}
-          >
-            Home
-          </Button>
-        </Link>
-        <Link to="/events">
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ bg: "transparent", color: "#4FD1C5" }}
-          >
-            Events
-          </Button>
-        </Link>
-        <Link to="/contact">
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ bg: "transparent", color: "#4FD1C5" }}
-          >
-            Contact
-          </Button>
-        </Link>
       </Box>
     </Box>
   );

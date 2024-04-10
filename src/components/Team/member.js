@@ -19,6 +19,9 @@ import nysa from "./nysa.jpg";
 import vishal from "./vishal.jpeg";
 import swayam from "./swayam.jpg";
 import shivansh from "./shivansh.png";
+import dhruv from "./dhruv.jpg";
+import amay from "./amay.jpg";
+import stuti from "./stuti.jpg";
 const members = [
   {
     name: "Kushal Gupta",
@@ -176,6 +179,28 @@ const members = [
     position: "Developer",
     linkedIn:
       "https://www.linkedin.com/in/kumar-shivansh-sinha-6a807324b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    name: "Dhruv Singh",
+    id: "2022A4PS1399H",
+    photo: dhruv,
+    position: "Research and Content",
+    linkedIn: "https://www.linkedin.com/in/dhruv-singh-9910a925b/",
+  },
+  {
+    name: "Amay Deodhar",
+    id: "2023A7PS0155H",
+    photo: amay,
+    position: "Logistics",
+    linkedIn:
+      "https://www.linkedin.com/in/amay-deodhar-095539284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    name: "Stuti Nagar",
+    id: "2023A5PS1048H",
+    photo: stuti,
+    position: "Research and Content",
+    linkedIn: "https://www.linkedin.com/in/stuti-n-791b88206",
   },
 ];
 

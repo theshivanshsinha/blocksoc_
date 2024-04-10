@@ -19,7 +19,7 @@ const Team = () => {
         textAlign="center"
         position="relative"
         top="4.9vh"
-        left="-45vw"
+        left="-40vw"
       >
         Our <span style={{ color: "#b300b3" }}>Team</span>
       </Heading>

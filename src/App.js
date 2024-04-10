@@ -9,7 +9,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Team from "./components/Team/Team";
 import MainPage from "./components/MainPage/MainPage";
 import Projects from "./components/Projects/Projects";
-
+import "./index.css";
 function App() {
   const [showNav, setShowNav] = useState(false);
 
