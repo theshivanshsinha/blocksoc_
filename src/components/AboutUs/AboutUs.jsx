@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, VStack, Heading, Image, Center } from "@chakra-ui/react";
-import Nav2 from "../Nav2/Nav2";
+import "./About.css";
 
 const AboutUs = () => {
   return (
@@ -16,12 +16,7 @@ const AboutUs = () => {
           width={"90vw"}
         >
           <Center>
-            <Image
-              src={"./logo.png"}
-              alt="Blocksoc Logo"
-              boxSize={{ base: "150px", md: "200px" }}
-              style={{ width: "20vw", height: "40vh" }}
-            />
+            <Image src={"./logo.png"} alt="Blocksoc Logo" className="logo" />
           </Center>
           <VStack spacing={6} align="start" w="40vw" mt={8}>
             <Heading
@@ -29,12 +24,15 @@ const AboutUs = () => {
               fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
               style={{ position: "relative", top: "-10vh" }}
             >
-              <span style={{ color: "#b300b3" }}>About </span>Us
+              <span style={{ color: "#b300b3" }} className="abt-text">
+                About{" "}
+              </span>
+              Us
             </Heading>
             <Text
-              fontSize={{ base: "md", md: "lg" }} // Decreased font size
               maxW="80ch"
-              style={{ position: "relative", top: "-10vh", fontSize: "1.5rem" }}
+              style={{ position: "relative", top: "-10vh" }}
+              className="txt"
             >
               We are the Blockchain Club of BPHC. Our enthusiasm for Blockchain
               Technology is matched only by our deep and unwavering dedication
@@ -47,14 +45,13 @@ const AboutUs = () => {
           </VStack>
           <Image
             src={require("./about.jpg")} // Adjust the path to your image
-            height={"440px"}
-            width={"700px"}
             style={{
               position: "relative",
               left: "65vw",
               transform: "translateX(-50%)",
-              top: "-43vh",
-            }} // Adjusted image position
+              top: "-50vh",
+            }}
+            className="abt-img"
           />
         </Box>
       </Center>

@@ -25,7 +25,7 @@ function Nav() {
       position="fixed"
       top="0"
       left="0"
-      width="100%"
+      width="100vw"
       zIndex="999"
       boxShadow={`0 2px 4px rgba(0, 0, 0, ${scrollOpacity * 0.1})`}
       backdropFilter="blur(10px)"
@@ -33,13 +33,13 @@ function Nav() {
     >
       <Box
         display="flex"
-        maxWidth="1200px"
         position={"relative"}
         left={"50%"}
         px={4}
         py={2}
         justifyContent="space-between"
         alignItems="center"
+        width="100vw"
       >
         <Box style={{ opacity: scrollOpacity }}>
           <Link to="/">

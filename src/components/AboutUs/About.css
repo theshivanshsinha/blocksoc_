@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  .logo {
+    width: 10%;
+    height: 20%;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo {
+    width: 20%;
+    height: 40%;
+    position: relative;
+    left: -5vw;
+    top: -5vh;
+  }
+  .abt-text {
+    font-size: 3rem;
+  }
+  .txt {
+    font-size: 1.5rem;
+  }
+  .abt-img {
+    height: 60%;
+    width: 50%;
+  }
+}
