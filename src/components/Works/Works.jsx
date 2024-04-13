@@ -8,11 +8,11 @@ import {
   Center,
   Divider,
 } from "@chakra-ui/react";
-import Nav2 from "../Nav2/Nav2";
+import "./Work.css";
 
 const AboutUs = () => {
   return (
-    <Box minHeight="80vh" bg="gray.900" color="white">
+    <Box minHeight="80vh" bg="gray.900" color="white" className="box">
       <Center>
         <Box
           p={10}
@@ -33,7 +33,7 @@ const AboutUs = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                width: "100vw",
+                width: "70vw",
               }}
             >
               <Text
@@ -41,9 +41,11 @@ const AboutUs = () => {
                 maxW="70ch"
                 style={{
                   position: "relative",
-                  top: "6vh",
+                  top: "4vh",
                   fontSize: "1.5rem",
                   left: "0vw",
+                  overflowY: "auto",
+                  maxHeight: "40vh",
                 }}
               >
                 The Blockchain Club is involved in a spectrum of activities

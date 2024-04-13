@@ -8,11 +8,11 @@ import {
   Center,
   Divider,
 } from "@chakra-ui/react";
-import Nav2 from "../Nav2/Nav2";
+import "./Vision.css";
 
 const AboutUs = () => {
   return (
-    <Box minHeight="80vh" bg="gray.900" color="white">
+    <Box minHeight="80vh" bg="gray.900" color="white" className="box">
       <Center>
         <Box
           p={10}
@@ -33,7 +33,7 @@ const AboutUs = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                width: "100vw",
+                width: "70vw",
               }}
             >
               <iframe
@@ -46,9 +46,11 @@ const AboutUs = () => {
                 maxW="70ch"
                 style={{
                   position: "relative",
-                  top: "6vh",
+                  top: "4vh",
                   fontSize: "1.5rem",
                   left: "15vw",
+                  overflowY: "auto",
+                  maxHeight: "40vh",
                 }}
               >
                 We aim to foster a lively community where members can learn,
